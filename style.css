@@ -1,0 +1,262 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+#element {
+    scrollbar-width: none;
+}
+
+
+/* typografie */
+
+@font-face {
+    font-family: 'text';
+    src: url('/attributes/text/mexcellent_rg-webfont.woff2') format('woff2'),
+         url('/attributes/text/mexcellent_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'textb';
+    src: url('/attributes/text/mexcellent_3d-webfont.woff2') format('woff2'),
+         url('/attributes/text/mexcellent_3d-webfont.woff/') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* start layout section home */
+
+.full-width{
+    height: 100vh;
+    width: 100%;
+}
+
+.home{
+    background: url(/attributes/bgv.png);
+}
+
+.logo{
+    position: relative;
+    top: 40vh;
+    height: 20vh;
+    margin-left: 2%;
+    background: url(/attributes/img/TheVeinsLogo.png);
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: bottom, center;
+}
+
+.home-band-img{
+    width: 80%;
+    margin-left: 10%;
+    height: 45vh;
+    background: url(/attributes/img/bandpg.png);
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position: bottom, center;
+}
+
+menu{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #E8E6D9;
+    height: 20vh;
+    width: 60%;
+    margin-left: 20%;
+    border: #CC1654 3px;
+    border-style: solid;
+    border-width: 5px;
+    animation: glowing 5000ms infinite;
+}
+
+.social-icon{
+    height: 12px;
+}
+.home-social-icons{
+    width: fit-content;
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+@media only screen and (max-width: 1300px) {
+    menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #E8E6D9;
+        height: 20vh;
+        width: 100%;
+        margin-left: 0%;
+        border:none;
+        border-top: solid #CC1654 3px;
+        border-bottom: solid #CC1654 3px;
+        animation: glowing 5000ms infinite;
+    }
+    
+  }
+
+
+  @media only screen and (max-width: 700px) {
+    menu{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: fit-content;
+        margin-left: 0%;
+        border:none;
+        border-top: solid #CC1654 3px;
+        border-bottom: solid #CC1654 3px;
+        animation: glowing 5000ms infinite;
+        padding-bottom: 20px;
+    }
+
+    .full-width{
+        min-height: 100vh;
+        max-height: 150vh;
+        width: 100%;
+    }
+
+    .logo{
+        position: relative;
+        top: 10vh;
+        height: 20vh;
+
+    }
+
+    .home-social-icons{
+        width: fit-content;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home-band-img{
+        height: 35vh;
+    }
+    
+  }
+
+  /* button layout */
+
+button{
+    max-width: fit-content;
+    background-color: rgb(0, 92, 128);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: #fff solid 3px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    margin: 5px 5px 0px 5px;
+    animation: glowing 5000ms infinite;
+}
+
+button:hover{
+    background-color: #fff;
+    color: rgb(0, 92, 128);
+    border:  rgb(0, 92, 128) solid 3px;
+}
+
+.subtitle{
+    text-align: center;
+    padding: 10px;
+    color: rgb(0, 92, 128);
+    font-size: 34px;
+    font-family: 'text';
+}
+
+.bold{
+    font-family: 'textb';
+}
+
+/* button glow animation */
+@keyframes glowing {
+    0% { box-shadow: 0 0 -10px #c4a300; }
+    40% { box-shadow: 0 0 20px #c4a300; }
+    60% { box-shadow: 0 0 20px #c4a300; }
+    100% { box-shadow: 0 0 -10px #c4a300; }
+  }
+
+
+/* start layout section about */
+
+.about{
+    padding-top: 30vh;
+    background: url(/attributes/bgabout.png);
+    background-size: 20%;
+    border-top: #CC1654 solid 3px;
+    border-bottom: #CC1654 solid 3px;
+}
+
+/* start section contact */
+
+.contact{
+    background-color: rgb(0, 92, 128);
+    background: url(/attributes/bgcontact.png);
+    background-size: 30%;
+    padding-top: 30vh;
+}
+
+/* formlayout */
+
+.form-container{
+    background-color: #E8E6D9;
+    height: 300px;
+    padding: 40px 20px 0px 20px;
+    width: 60%;
+    margin-left: 20%;
+    border: #CC1654 3px;
+    border-style: solid;
+    border-width: 5px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    max-width: fit-content;
+    background-color: rgb(0, 92, 128);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: #fff solid 3px;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    margin: 5px 5px 0px 5px;
+    animation: glowing 5000ms infinite;
+  }
+
+  #back-up{
+      display: none;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+  }
+  

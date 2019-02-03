@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>veins</title>
+    <link rel="stylesheet" href="style-reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="1" class="home full-width">
+        <section class="logo"></section>
+        <section class="home-band-img"></section> 
+        <menu>
+            <section class="home-social-icons">
+                    <h2 class="subtitle"> Menu </h2>
+                    <button id="button1" class="social"> Ontdek the Veins </button> 
+                    <button id="button2" class="social"> Boeken & Contact </button> 
+            </section>
+            <section class="home-social-icons">
+                    <h2 class="subtitle bold"> The Veins </h2>
+                    <p> lLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nunc et diam mollis lacinia et a eros. </p>
+            </section>
+            <section class="home-social-icons">
+                <h2 class="subtitle"> Connect </h2>
+                <a href="https://www.facebook.com/theveinsband/"> <button class="social"><img class="social-icon" src="./attributes/img/Instagram-512.png" alt="socialicon-facebook"> Instagram </button> </a>
+                <button class="social"><img class="social-icon" src="./attributes/img/facebook.png" alt="socialicon-facebook"> Facebook </button> 
+            </section>
+        </menu>
+    </section>
+    <section id="2" class="about full-width">
+            <section class="form-container">
+                    <h2 class="subtitle bold"> About </h2>
+            </section>
+    </section>
+    <section id="3" class="contact full-width">
+        <section class="form-container">
+            <form>
+                <h2 class="subtitle bold">contact </h2>
+                <input type="text" name="firstname" placeholder="voornaam">
+                <input type="text" name="lastname" placeholder="achternaam">
+                <input type="text" name="message" placeholder="bericht">
+                <input type="submit" name="send" value="vesturen">
+            </form>
+        </section>
+        <button id="back-up"> Home </button>
+    </section>
+    <footer>
+        <p> copyright tim :D </p>
+    </footer>
+</body>
+</html>
+
+<!-- javascipt code voor omhoogscrollen -->
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("back-up").style.display = "block";
+        } else {
+        document.getElementById("back-up").style.display = "none";
+        }
+    }
+    
+    document.getElementById("back-up").addEventListener("click", topFunction);
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<!-- jqeury code voor menu scrollen naar divs van pagina -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function (){
+        $("#button1").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#2").offset().top
+            }, 1000);
+        });
+        $("#button2").click(function (){
+            $('html, body').animate({
+                scrollTop: $("#3").offset().top
+            }, 2000);
+        });
+    });
+</script>
